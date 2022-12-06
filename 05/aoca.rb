@@ -5,6 +5,7 @@ initial_values = []
 stacks = []
 
 def build_begin_stacks(initial_values)
+  puts initial_values.first
   stacks = Array.new(initial_values.first.chars.size)
   initial_values.reverse.each do |value|
     value.split("").each_with_index do |item, i|
@@ -26,7 +27,6 @@ File.readlines('input', chump: true).each_with_index do |line, i|
   elsif line != nil
     initial_values << line.gsub("    ","-").gsub("   ", "-").gsub("[", "").gsub("]", "").gsub(" ", "")
   end
-
 end
 
 puts stacks.map(&:last).join
