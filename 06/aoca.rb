@@ -3,7 +3,6 @@ input = "rnttlvtttmnmpmhpmmzvmmhpmmnrntnnsnrnndvnddmbbtptssjcczmmbwmbmwwmmflfggw
 code = []
 
 input.chars.each_with_index do |char, i|
-  puts char
   code << char
   if code.last(4).uniq.size == 4
     puts i + 1
