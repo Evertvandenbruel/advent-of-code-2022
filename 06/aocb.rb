@@ -5,7 +5,7 @@ code = []
 input.chars.each_with_index do |char, i|
   puts char
   code << char
-  if code.last(4).uniq.size == 4
+  if code.last(14).uniq.size == 14
     puts i + 1
     return
   end
